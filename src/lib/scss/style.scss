@@ -1,0 +1,105 @@
+@use './reset';
+@use './classes';
+@use './variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Nunito:wght@400;700&display=swap');
+
+body {
+	font-size: 100%;
+	margin-inline: 10vw;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	display: flex;
+}
+
+%h {
+	@include font-lato(700);
+	text-align: center;
+}
+
+h1 {
+	@extend %h;
+	font-size: 5em;
+	margin: 0.1rem 0;
+}
+
+h3 {
+	@extend %h;
+	font-size: 2.5em;
+}
+
+h4 {
+	@extend %h;
+	font-size: 2em;
+}
+
+h5 {
+	@extend %h;
+	font-size: 1.75em;
+}
+
+input {
+	@extend %regular-400;
+
+	border: $gray solid 1px;
+	border-radius: 5px;
+	padding: 7px 0px 7px 10px;
+	box-sizing: border-box;
+
+	width: 100%;
+
+	&::placeholder {
+		color: $gray;
+	}
+
+	&:focus {
+		border: $color-primary solid 2px;
+		padding: 6px 0 6px 9px;
+		outline: none;
+	}
+
+	&:not(:focus):not(:placeholder-shown):valid {
+		border: $color-primary solid 1px;
+	}
+
+	&:not(:focus):not(:placeholder-shown):invalid {
+		border: $red solid 1px;
+	}
+
+	&:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+		display: block;
+	}
+}
+
+textarea {
+	resize: none;
+	@extend input;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+nav {
+	position: fixed;
+	display: flex;
+	top: 0.75rem;
+	width: calc(100vw - 2 * 10vw);
+
+	justify-content: space-between;
+
+	> img {
+		width: 100px;
+	}
+
+	> div {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}

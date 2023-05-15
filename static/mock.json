@@ -1,0 +1,35 @@
+[
+	{
+		"name": "Jogging",
+		"motivation": "",
+		"status": "none",
+		"stats": {
+			"score": 45,
+			"streak": 13,
+			"bestStreak": 15
+		},
+		"type": "positive"
+	},
+	{
+		"name": "Dont smoke",
+		"motivation": "",
+		"status": "done",
+		"stats": {
+			"score": 22,
+			"streak": 0,
+			"bestStreak": 7
+		},
+		"type": "negative"
+	},
+	{
+		"name": "Drink water",
+		"motivation": "",
+		"status": "none",
+		"stats": {
+			"score": 60,
+			"streak": 30,
+			"bestStreak": 30
+		},
+		"type": "positive"
+	}
+]

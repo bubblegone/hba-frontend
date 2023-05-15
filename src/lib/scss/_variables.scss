@@ -1,0 +1,44 @@
+$black: #000000;
+$white: #ffffff;
+
+$color-primary: hsl(196, 83%, 30%);
+$color-primary-alt: hsl(196, 83%, 35%);
+$color-primary-tint: hsl(196, 83%, 90%);
+$green: hsl(149, 76%, 55%);
+$green-alt: hsl(149, 76%, 65%);
+$green-tint: hsl(149, 76%, 95%);
+$red: hsl(5, 76%, 55%);
+$red-alt: hsl(5, 76%, 65%);
+$red-tint: hsl(5, 76%, 95%);
+$yellow: hsl(45, 100%, 55%);
+
+$light-gray: #f5f5f5;
+$gray: #c9c9c9;
+
+@mixin _font-style($font-family, $font-weight) {
+	font-family: $font-family, sans-serif;
+	font-weight: $font-weight;
+}
+
+@mixin font-lato($font-weight) {
+	@include _font-style('Lato', $font-weight);
+}
+
+@mixin font-nunito($font-weight) {
+	@include _font-style('Nunito', $font-weight);
+}
+
+%menu-active {
+	@include font-nunito(700);
+	font-size: 1rem;
+}
+
+%regular-400 {
+	@include font-nunito(400);
+	font-size: 0.875rem;
+}
+
+%big-400 {
+	@include font-nunito(400);
+	font-size: 1rem;
+}

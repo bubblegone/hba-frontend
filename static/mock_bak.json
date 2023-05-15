@@ -1,0 +1,43 @@
+[
+	{
+		"name": "Jogging",
+		"status": "none",
+		"stats": {
+			"score": 45,
+			"streak": 13,
+			"bestStreak": 15
+		},
+		"conf": {
+			"type": "positive"
+		}
+	},
+	{
+		"name": "Dont smoke",
+		"status": "failed",
+		"stats": {
+			"score": 22,
+			"streak": 0,
+			"bestStreak": 7
+		},
+		"conf": {
+			"type": "negative"
+		}
+	},
+	{
+		"name": "Drink water",
+		"status": "none",
+		"stats": {
+			"score": 60,
+			"streak": 30,
+			"bestStreak": 30
+		},
+		"conf": {
+			"type": "positive",
+			"measurable": {
+				"type": "at_least",
+				"desired_value": 6,
+				"current_value": 5
+			}
+		}
+	}
+]
